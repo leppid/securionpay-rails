@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SecurionPay::Cards do
+describe SecurionRails::Cards do
   let(:customer_id) { 'some_customer_id' }
   let(:card_id) { 'some_card_id' }
   let(:params) { double }

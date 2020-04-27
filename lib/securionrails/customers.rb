@@ -1,4 +1,4 @@
-module SecurionPay
+module SecurionRails
   class Customers
     extend TransactionBase
 

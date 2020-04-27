@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SecurionPay::CustomerRecords do
+describe SecurionRails::CustomerRecords do
   let(:customer_record_id) { double }
   let(:customer_record_fee_id) { double }
   let(:customer_record_profit_id) { double }

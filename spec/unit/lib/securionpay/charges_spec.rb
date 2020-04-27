@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SecurionPay::Charges do
+describe SecurionRails::Charges do
   let(:customer_id) { 'some_customer_id' }
   let(:charge_id) { 'some_charge_id' }
   let(:params) { double }

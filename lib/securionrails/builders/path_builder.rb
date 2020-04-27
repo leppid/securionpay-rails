@@ -1,4 +1,4 @@
-module SecurionPay
+module SecurionRails
   module Builders
     class PathBuilder
       def self.build_card_path(customer_id, card_id = nil)

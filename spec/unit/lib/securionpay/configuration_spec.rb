@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SecurionPay::Configuration do
+describe SecurionRails::Configuration do
   let(:service_url) { double }
   let(:secret_key) { double }
 
@@ -9,8 +9,8 @@ describe SecurionPay::Configuration do
   end
 
   before do
-    SecurionPay::Configuration.service_url = service_url
-    SecurionPay::Configuration.secret_key = secret_key
+    SecurionRails::Configuration.service_url = service_url
+    SecurionRails::Configuration.secret_key = secret_key
   end
 
   describe '.service_url' do

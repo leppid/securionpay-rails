@@ -1,4 +1,4 @@
-module SecurionPay
+module SecurionRails
   # Blacklist can be used to block unwanted charges.
   class Blacklist
     extend TransactionBase

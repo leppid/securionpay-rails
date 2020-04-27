@@ -1,4 +1,4 @@
-module SecurionPay
+module SecurionRails
   module TransactionBase
     def communicator
       @communicator ||= Communicator

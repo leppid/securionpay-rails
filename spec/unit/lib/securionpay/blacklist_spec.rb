@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SecurionPay::Blacklist do
+describe SecurionRails::Blacklist do
   let(:blacklist_rule_id) { 'some_blacklist_rule_id' }
   let(:params) { { foo: :bar } }
   let(:communicator) { double }

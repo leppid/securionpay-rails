@@ -1,11 +1,4 @@
-# SecurionPay ruby gem
-
-[![Gem Version](https://badge.fury.io/rb/securionpay.svg)](https://badge.fury.io/rb/securionpay)
-[![Build Status](https://travis-ci.org/gwilczynski/securionpay-ruby.svg?branch=master)](https://travis-ci.org/gwilczynski/securionpay-ruby)
-[![Code Climate](https://codeclimate.com/github/gwilczynski/securionpay-ruby/badges/gpa.svg)](https://codeclimate.com/github/gwilczynski/securionpay-ruby)
-[![Test Coverage](https://codeclimate.com/github/gwilczynski/securionpay-ruby/badges/coverage.svg)](https://codeclimate.com/github/gwilczynski/securionpay-ruby/coverage)
-[![Issue Count](https://codeclimate.com/github/gwilczynski/securionpay-ruby/badges/issue_count.svg)](https://codeclimate.com/github/gwilczynski/securionpay-ruby)
-[![Dependency Status](https://gemnasium.com/badges/github.com/gwilczynski/securionpay-ruby.svg)](https://gemnasium.com/github.com/gwilczynski/securionpay-ruby)
+# SecurionRails ruby gem
 
 If you don't already have SecurionPay account you can create it [here](https://securionpay.com/register).
 
@@ -14,7 +7,7 @@ If you don't already have SecurionPay account you can create it [here](https://s
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'securionpay'
+gem 'securionrails'
 ```
 
 And then execute:
@@ -26,7 +19,7 @@ $ bundle
 Or install it yourself as:
 
 ```bash
-$ gem install securionpay
+$ gem install securionrails
 ```
 
 Unit tests:
@@ -44,7 +37,7 @@ $ SECRET_KEY='pr_test_id' bundle exec rake spec:integration
 Mutation tests:
 
 ```bash
-$ SPEC_OPTS="--pattern spec/unit/**/*_spec.rb" bundle exec mutant --include lib --require securionpay --use rspec SecurionPay*
+$ SPEC_OPTS="--pattern spec/unit/**/*_spec.rb" bundle exec mutant --include lib --require securionrails --use rspec securionrails*
 ```
 
 ## Usage
@@ -52,13 +45,13 @@ $ SPEC_OPTS="--pattern spec/unit/**/*_spec.rb" bundle exec mutant --include lib 
 Configuration:
 
 ```ruby
-SecurionPay::Configuration.secret_key = 'pr_test_id'
+SecurionRails::Configuration.secret_key = 'pr_test_id'
 ```
 
 If you want connect do different backent:
 
 ```ruby
-SecurionPay::Configuration.service_url = 'https://api.chuck.norris.com'
+SecurionRails::Configuration.service_url = 'https://api.chuck.norris.com'
 ```
 
 ### Create a new Card
@@ -74,7 +67,7 @@ card = {
   cardholderName: 'John Doe',
 }
 
-SecurionPay::Cards.create(customer_id, card)
+SecurionRails::Cards.create(customer_id, card)
 ```
 
 ### Retrieve an existing Card
@@ -85,7 +78,7 @@ Retrieve an existing card object.
 customer_id = 'cust_id'
 card_id = 'card_id'
 
-SecurionPay::Cards.retrieve(customer_id, card_id)
+SecurionRails::Cards.retrieve(customer_id, card_id)
 ```
 
 ### Update an existing Card
@@ -98,7 +91,7 @@ card_id = 'card_id'
 card = {
   cardholderName: 'Mr Bean'
 }
-SecurionPay::Cards.update(customer_id, card_id, card)
+SecurionRails::Cards.update(customer_id, card_id, card)
 ```
 
 ### Delete a Card
@@ -108,7 +101,7 @@ Deletes an existing card object.
 ```ruby
 customer_id = 'cust_id'
 card_id = 'card_id'
-SecurionPay::Cards.delete(customer_id, card_id)
+SecurionRails::Cards.delete(customer_id, card_id)
 ```
 
 ### List Cards
@@ -117,7 +110,7 @@ List card objects for given customer.
 
 ```ruby
 customer_id = 'cust_id'
-SecurionPay::Cards.list(customer_id)
+SecurionRails::Cards.list(customer_id)
 ```
 
 ### Create a Blacklist Rule
@@ -127,27 +120,27 @@ blacklist_rule = {
   ruleType: 'fingerprint',
   fingerprint: '123abc456efg'
 }
-SecurionPay::Blacklist.create(blacklist_rule)
+SecurionRails::Blacklist.create(blacklist_rule)
 ```
 
 ### Retrieve an existing Blacklist Rule
 
 ```ruby
 blacklist_rule_id = 'blr_number'
-SecurionPay::Blacklist.retrieve(blacklist_rule_id)
+SecurionRails::Blacklist.retrieve(blacklist_rule_id)
 ```
 
 ### Delete a Blacklist Rule
 
 ```ruby
 blacklist_rule_id = 'blr_number'
-SecurionPay::Blacklist.delete(blacklist_rule_id)
+SecurionRails::Blacklist.delete(blacklist_rule_id)
 ```
 
 ### List Blacklist Rules
 
 ```ruby
-SecurionPay::Blacklist.list
+SecurionRails::Blacklist.list
 ```
 
 ## Development
@@ -158,4 +151,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/securionpay/securionpay-ruby
+Bug reports and pull requests are welcome on GitHub at https://github.com/leppid/securionrails

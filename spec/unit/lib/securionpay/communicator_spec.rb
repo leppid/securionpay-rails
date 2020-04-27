@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SecurionPay::Communicator do
+describe SecurionRails::Communicator do
   let(:service_url) { 'some_service_url' }
   let(:path) { 'some_path' }
   let(:body) { double }
@@ -32,8 +32,8 @@ describe SecurionPay::Communicator do
 
   before do
     subject.web_consumer = web_consumer
-    SecurionPay::Configuration.secret_key = secret_key
-    SecurionPay::Configuration.service_url = service_url
+    SecurionRails::Configuration.secret_key = secret_key
+    SecurionRails::Configuration.service_url = service_url
   end
 
   describe '.get' do

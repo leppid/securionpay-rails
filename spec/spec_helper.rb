@@ -5,7 +5,7 @@ require_relative 'support/random_data'
 CodeClimate::TestReporter.start
 
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
-require 'securionpay'
+require 'securionrails'
 
 RSpec.configure do |config|
   config.color = true

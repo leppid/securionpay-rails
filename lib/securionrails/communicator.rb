@@ -1,6 +1,6 @@
 require 'httparty'
 
-module SecurionPay
+module SecurionRails
   class Communicator
     class << self
       attr_accessor :web_consumer

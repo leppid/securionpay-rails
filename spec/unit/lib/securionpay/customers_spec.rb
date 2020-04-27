@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SecurionPay::Customers do
+describe SecurionRails::Customers do
   let(:customer_id) { 'some_customer_id' }
   let(:params) { double }
   let(:communicator) { double }

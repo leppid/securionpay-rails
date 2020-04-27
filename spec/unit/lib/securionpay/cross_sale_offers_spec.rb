@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SecurionPay::CrossSaleOffers do
+describe SecurionRails::CrossSaleOffers do
   let(:cross_sale_offer_id) { double }
   let(:params) { double }
   let(:communicator) { double }

@@ -1,4 +1,4 @@
-module SecurionPay
+module SecurionRails
   class Charges
     extend TransactionBase
 

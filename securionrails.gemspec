@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'securionpay/version'
+require 'securionrails/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "securionpay"
-  spec.version       = SecurionPay::VERSION
-  spec.authors       = ["Grzegorz Wilczynski"]
+  spec.name          = "securionrails"
+  spec.version       = SecurionRails::VERSION
+  spec.authors       = ["Grzegorz Wilczynski, Denis Lepihov"]
   spec.email         = ["support@securionpay.com"]
 
-  spec.summary       = "SecurionPay ruby gem"
-  spec.description   = "SecurionPay ruby gem"
+  spec.summary       = "Improved SecurionPay ruby gem"
+  spec.description   = "Improved SecurionPay ruby gem"
   spec.homepage      = "https://securionpay.com"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SecurionPay::TransactionBase do
+describe SecurionRails::TransactionBase do
   let(:communicator) { double }
   let(:path_builder) { double }
 
@@ -10,7 +10,7 @@ describe SecurionPay::TransactionBase do
 
   describe '.communicator' do
     it 'get object' do
-      expect(subject.communicator).to be(SecurionPay::Communicator)
+      expect(subject.communicator).to be(SecurionRails::Communicator)
       subject.communicator = communicator
       expect(subject.communicator).to be(communicator)
     end
@@ -18,7 +18,7 @@ describe SecurionPay::TransactionBase do
 
   describe '.path_builder' do
     it 'get object' do
-      expect(subject.path_builder).to be(SecurionPay::Builders::PathBuilder)
+      expect(subject.path_builder).to be(SecurionRails::Builders::PathBuilder)
       subject.path_builder = path_builder
       expect(subject.path_builder).to be(path_builder)
     end

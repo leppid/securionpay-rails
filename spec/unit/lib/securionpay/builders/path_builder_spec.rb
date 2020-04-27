@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SecurionPay::Builders::PathBuilder do
+describe SecurionRails::Builders::PathBuilder do
   let(:customer_id) { 'some_customer_id' }
   let(:card_id) { 'some_card_id' }
   let(:blacklist_rule_id) { 'some_blacklist_rule_id' }
